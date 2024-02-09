@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "8c1d1b7f-a4e2-4c2f-aac2-86b48c7a1865",
+		"name": "api-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9853292"
+	},
+	"item": [
+		{
+			"name": "get products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 7855e58f04326f7c812f83cfeea3e7a05c638e5f",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2b65afadb0a77f680a072fde364d5f01e6580fb2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/products",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 7855e58f04326f7c812f83cfeea3e7a05c638e5f",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2b65afadb0a77f680a072fde364d5f01e6580fb2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.ru",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "user",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "user",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "admin@shop.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product N\",\r\n    \"description\": \"Description N\",\r\n    \"price\": \"100.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/product/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"product",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cart",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cart/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/order",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/order",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ef77affcd2a0cd2d8f6daec12233505e313973c1",
+						"type": "text",
+						"description": "admin",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer e378bec2153bb668127eee4dc02079d0e3b37a6f",
+						"type": "text",
+						"description": "user"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product One\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api-shop/v2",
+			"type": "string"
+		}
+	]
+}
